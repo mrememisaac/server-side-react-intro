@@ -1,0 +1,2 @@
+const Hello = (props) => React.createElement('h1', { className: 'orange'}, `Hi there! @ ${props.time}`);
+ReactDOM.render(React.createElement(Hello,{ time: new Date()}, null), document.getElementById("app"));
