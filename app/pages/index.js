@@ -1,4 +1,6 @@
-class Hello extends React.Component {
+import React from 'react';
+
+class Index extends React.Component {
 
     constructor(props){
         super(props);
@@ -22,9 +24,7 @@ class Hello extends React.Component {
     }
 
     render() {
-        return React.createElement('h1', {
-            className: 'orange'
-        }, `${this.state.time}`);
+        return <h1>{this.state.time}</h1>
     }
 } 
-ReactDOM.render(React.createElement(Hello,{ time: new Date()}, null), document.getElementById("app"));
+export default Index;
