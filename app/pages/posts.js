@@ -31,9 +31,15 @@ class Posts extends React.Component {
 
     render() {
          
-        return ( <div>
-            {this.state.posts.map((post) => <div key={`d${post.id}`}><h1 key={post.id}>{post.title}</h1><p key={post.author}>{post.author}</p></div>)}
-        </div>)
+        return ( 
+            <div>
+                {this.state.posts.map((post) => <div key={`d${post.id}`}>
+                    <h1 key={post.guid}>{post.title}</h1>
+                    <p key={post.id}>{post.authors[0].name}</p>
+                    <p key={post.id}>{post.abstract}</p>
+                    <p key={post.id}>{post.body}</p></div>)
+                }
+            </div>)
     }
 } 
 export default Posts;
