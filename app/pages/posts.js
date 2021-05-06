@@ -34,6 +34,7 @@ class Posts extends React.Component {
         return ( 
             <div>
                 {this.state.posts.map((post) => <div key={`d${post.id}`}>
+                    <img key={post.guid} src={post.picture}/>
                     <h1 key={post.guid}>{post.title}</h1>
                     <p key={post.id}>{post.authors[0].name}</p>
                     <p key={post.id}>{post.abstract}</p>
